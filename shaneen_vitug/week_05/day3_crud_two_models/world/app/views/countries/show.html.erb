@@ -1,0 +1,45 @@
+<div class="row justify-content-between">
+  <div class="col-4">
+    <h2><%= @country.name %></h2>
+  </div>
+
+  <div class="col-4">
+    <div class="controls row justify-content-end">
+      <ul class="list-group list-group-horizontal-sm">
+        <li class="list-group-item list-group-item-success"><%= link_to "Edit Country", edit_country_path(@country) %></li>
+        <li class="list-group-item list-group-item-danger"><%= link_to "Delete", @country, :method => 'delete', :data => { :confirm => "Are you sure?"} %></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="row justify-content-around">
+  <div class="col-4">
+    <h3><strong>Capital city</strong>:</h3>
+    <p><em><%= @country.capitalcity %></em></p>
+  </div>
+  <div class="col-4">
+    <h3><strong>Language</strong>:</h3>
+    <p><em><%= @country.language %></em></p>
+  </div>
+</div>
+
+<div class="row justify-content-around">
+  <div class="col-4">
+    <% if @country.continent.present? %>
+      <h3><strong>Continent</strong>:</h3> <%= link_to @country.continent.name, @country.continent %>
+    <% end %>
+  </div>
+  <div class="col-4">
+    <h3><strong>Visited?</strong></h3>
+    <p><em><%= @country.visited %></em></p>
+  </div>
+</div>
+
+<div class="flag-country">
+  <h3><strong>Flag</strong></h3>
+  <%= image_tag @country.flag, :class => 'flag img-thumbnail' if @country.flag.present? %>
+
+  <h3><strong>Image</strong></h3>
+  <%= image_tag @country.image, :class => 'feature img-thumbnail' if @country.image.present? %>
+</div>

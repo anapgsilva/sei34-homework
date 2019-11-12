@@ -1,0 +1,49 @@
+<div class="row justify-content-between">
+  <div class="col-4">
+    <h2><%= @continent.name %></h2>
+  </div>
+
+  <div class="col-4">
+    <div class="controls  row justify-content-end">
+      <ul class="list-group list-group-horizontal-sm">
+        <li class="list-group-item list-group-item-success"><%= link_to "Edit Continent", edit_continent_path(@continent) %></li>
+        <li class="list-group-item list-group-item-danger"><%= link_to "Delete", @continent, :method => 'delete', :data => { :confirm => "Are you sure?"} %></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="row justify-content-around">
+  <div class="col-4">
+    <h3><strong>Size</strong>:</h3>
+    <em><%= number_with_delimiter @continent.size %></em>
+  </div>
+  <div class="col-4">
+    <h3><strong>Population</strong>:</h3>
+    <em><%= number_with_delimiter @continent.population %></em>
+  </div>
+</div>
+
+<div class="row justify-content-around">
+  <div class="col-4">
+    <h3><strong>No. of Countries</strong>:</h3>
+    <em><%= @continent.numofcountries %></em>
+  </div>
+  <div class="col-4">
+    <h3><strong>Countries</strong>:</h3>
+    <ul class="list-inline">
+    <% @continent.countries.each do |country| %>
+      <li class="list-inline-item">
+      <%= link_to country.name, country %>
+      </li>
+    <% end %>
+    </ul>
+  </div>
+</div>
+
+<div class="info">
+  <h3><strong>Fun Fact</strong>:</h3>
+  <p><em><%= @continent.fact %></em></p>
+
+  <%= image_tag @continent.image, :class => 'feature img-thumbnail' if @continent.image.present? %>
+</div>

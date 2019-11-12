@@ -1,0 +1,19 @@
+<h2>Continents</h2>
+
+<strong>Click to see more information on:</strong>
+<ul class="list-inline">
+  <li class="list-inline-item">Size |</li>
+  <li class="list-inline-item">Populations |</li>
+  <li class="list-inline-item">Number of countries |</li>
+  <li class="list-inline-item">Fun Fact </li>
+</ul>
+
+<img class="img-fluid" src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201809/artem-bali-570619-unsplash_0.jpeg?Xj6WPh0FG13tiDWpYKZcrCWgXmpNIVxR">
+
+<% @continents.each do |continent| %>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <%= link_to continent.name, continent %>
+    </li>
+  </ul>
+<% end %>

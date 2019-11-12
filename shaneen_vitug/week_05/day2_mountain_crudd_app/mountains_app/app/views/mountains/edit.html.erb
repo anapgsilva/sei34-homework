@@ -1,0 +1,32 @@
+<div class="container container-fluid shadow p-3 mb-5 bg-white rounded">
+<h2>Edit Mountain</h2>
+
+<form action="<%= mountain_path(@mountain.id) %>" method="post">
+  <label>
+    Name:
+    <input name="name" required value="<%= @mountain.name %>">
+  </label>
+
+  <label>
+    Location:
+    <input name="location" value="<%= @mountain.location %>">
+  </label>
+
+  <label>
+    Elevation:
+    <input type="number" name="elevation" value="<%= @mountain.elevation %>">
+  </label>
+
+  <label>
+    Image:
+    <input type="url" name="image" value="<%= @mountain.image %>">
+  </label>
+
+  <label>
+    Fun fact:
+    <input name="fact" value="<%= @mountain.fact %>">
+  </label>
+
+  <button>Update Mountain</button>
+</form>
+</div>

@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container, header {
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+}
+
+.container {
+  padding: 3vh;
+  display: grid;
+  grid-template-columns: 50% 49%;
+}
+
+aside, aside * {
+  text-align: left;
+}
+
+.eaten {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.eaten div {
+  width: 20%;
+  height: 35vh;
+}
+
+.eaten h2 {
+  width: 100%;
+}
+
+.eaten div p {
+  max-height: 30px;
+}
+
+input {
+  height: 30px;
+  font-size: 25px;
+}
+
+.top {
+  display: flex;
+}
+
+.top div {
+  width: 50%;
+}

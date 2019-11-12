@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>World</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="container-fluid shadow p-3 mb-5 bg-white rounded" >
+        <nav class="navbar navbar-light" style="background-color: #F3F3F3;">
+          <%= link_to "Home", root_path %>
+          |
+          <%= link_to "Continents", continents_path %>
+          |
+          <%= link_to "Add A Continent", new_continent_path %>
+          |
+          <%= link_to "Countries", countries_path %>
+          |
+          <%= link_to "Add A Country", new_country_path %>
+        </nav>
+
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>

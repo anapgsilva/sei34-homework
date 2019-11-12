@@ -1,0 +1,10 @@
+<div class="container container-fluid shadow p-3 mb-5 bg-white rounded">
+  <h2>All Mountains</h2>
+    <% @mountains.each do |mountain| %>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <%= link_to mountain.name, mountain_path(mountain.id) %>
+      </li>
+    </ul>
+    <% end %>
+</div>

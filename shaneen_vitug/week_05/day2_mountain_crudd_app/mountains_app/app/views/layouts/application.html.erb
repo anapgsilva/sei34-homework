@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MountainsApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <%= stylesheet_link_tag "style" %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+  <body>
+    <nav class="navbar navbar-expand navbar-light sticky-top justify-content-end" style="background-color: black;">
+      <%= link_to "Home", root_path %>
+      |
+      <%= link_to "All Mountains", mountains_path %>
+      |
+      <%= link_to "New Mountain", new_mountain_path %>
+    </nav>
+    <nav class="navbar navbar-expand navbar-light fixed-top container-fluid justify-content-end" style="background-color: #FCD900;"></nav>
+      <%= yield %>
+  </body>
+</html>

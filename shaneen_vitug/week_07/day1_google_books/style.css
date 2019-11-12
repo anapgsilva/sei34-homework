@@ -1,0 +1,59 @@
+body {
+  background-color: #E8FCF3;
+}
+
+a {
+  text-decoration: none;
+  font-size: 11px;
+  color: black;
+  font-family: Arial, serif;
+  padding: 1em;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+form {
+  text-align: center;
+}
+
+label {
+  font-family: Arial, serif;
+  font-size: 50px;
+}
+
+input {
+  width: 200px;
+}
+
+button {
+  background-color: #E7E7E8;
+  border-radius: 2px;
+}
+
+#image {
+  margin: 0 auto;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  height: 100vh;
+}
+
+img {
+  width: 150px;
+}
+
+#title {
+  text-align: center;
+  font-size: 30px;
+  text-decoration: underline;
+}
+
+#synopsis {
+  text-align: justify;
+  font-size: 14px;
+}

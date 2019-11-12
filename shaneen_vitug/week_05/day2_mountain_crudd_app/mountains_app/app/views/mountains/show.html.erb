@@ -1,0 +1,19 @@
+<div class="container container-fluid shadow p-3 mb-5 bg-white rounded">
+  <h2><%= @mountain.name %></h2>
+  <div class="controls">
+    <%= link_to 'Edit mountain', edit_mountain_path(@mountain.id)%>
+    <%= button_to 'Delete mountain', mountain_path(@mountain.id), :method => 'delete' %>
+  </div>
+  <div class="row container-fluid">
+    <div class="col-8">
+      <%= image_tag @mountain.image, :class => 'feature' if @mountain.image.present? %>
+    </div>
+    <div class ="col">
+      <ul class="list-inline">
+        <li class="list-inline-item"><strong>Location: </strong><%= @mountain.location %></li>
+        <li class="list-inline-item"><strong>Elevation: </strong><%= number_to_human @mountain.elevation %> meters</li>
+        <li class="list-inline-item"><strong>Fun fact: </strong><%= @mountain.fact %></li>
+      </ul>
+    </div>
+  </div>
+</div>

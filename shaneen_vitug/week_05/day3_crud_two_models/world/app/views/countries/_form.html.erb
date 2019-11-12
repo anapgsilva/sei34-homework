@@ -1,0 +1,38 @@
+<%= form_for @country do |f| %>
+
+<%= f.submit :class => 'btn btn-success' %>
+
+<div class="row">
+  <div class="col">
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true, :autofocus => true, :class => 'form-control' %>
+  </div>
+  <div class="col">
+    <%= f.label :capitalcity, "Capital city"%>
+    <%= f.text_field :capitalcity, :class => 'form-control' %>
+  </div>
+</div>
+<div class="form-row">
+  <div class="form-group col-md-8">
+    <%= f.label :language %>
+    <%= f.text_field :language, :class => 'form-control' %>
+ </div>
+ <div class="form-group col-md-3">
+  <%= f.label :continent_id %>
+  <%= f.select :continent_id, Continent.pluck(:name, :id), :include_blank => true, :class => 'form-control' %>
+  </div>
+  <div class="form-group col-md-1">
+  <%= f.label :visited %>
+  <%= f.check_box :visited, :class => 'form-control' %>
+  </div>
+</div>
+<div class="form-group">
+  <%= f.label :flag %>
+  <%= f.url_field :flag, :class => 'form-control' %>
+</div>
+<div class="form-group">
+  <%= f.label :image %>
+  <%= f.url_field :image, :class => 'form-control' %>
+</div>
+
+<% end %>
