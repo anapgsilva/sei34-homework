@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cats</title>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css'>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Fluffers</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/cats">All Cats</a>
+            <a href="/cats/new">Add a new one</a>
+            <a href="/photos">Gallery</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="container">
+            <%= yield %>
+        </div>
+    </main>
+
+    <footer>
+        <p>© Copyright 2019</p>
+    </footer>
+</body>
+
+</html>

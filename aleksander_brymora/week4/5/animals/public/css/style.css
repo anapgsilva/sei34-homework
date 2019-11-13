@@ -1,0 +1,87 @@
+#random-cat {
+    margin: 0 auto;
+    max-width: 40%;
+}
+
+nav {
+    margin: 20px;
+    padding: 0;
+    margin: 15px 0;
+}
+
+nav a {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 5px;
+    transition: all 0.5s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer {
+    position: absolute;
+    bottom: 30px;
+    left: 45%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+label {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+label * {
+    margin: 20px 10px;
+}
+
+button {
+    width: 100px;
+    margin: auto;
+}
+
+.deledit {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 5px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 20px;
+}
+
+#cat-show {
+    max-height: 40vh;
+}
+
+#buttons {
+    margin-top: 5vh;
+}
+
+#photos {
+    max-width: 80%;
+    margin: auto;
+}
+
+#photos .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+#photos img {
+    display: inline-block;
+    max-height: 40vh;
+}

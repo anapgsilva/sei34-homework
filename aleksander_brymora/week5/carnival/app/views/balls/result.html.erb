@@ -1,0 +1,23 @@
+<div class="triangle-container">
+	<div class="content">
+		<svg height="500px" width="500">
+			<polygon points="250,60 100,300 400,300" class="triangle" />
+		</svg>
+		<p><%= @answer %></p>
+	</div>
+</div>
+
+<script>
+	document.querySelector('body').style.backgroundColor = "#00055a";
+	const triangle = document.querySelector('.triangle-container');
+	let opacity = 0;
+	triangle.style.opacity = opacity;
+	const reset = setInterval(function () {
+		if (opacity >= 1) {
+			clearInterval(reset);
+			triangle.style.opacity = 1;
+		}
+		opacity += 0.001;
+		triangle.style.opacity = opacity;
+	}, 4)
+</script>

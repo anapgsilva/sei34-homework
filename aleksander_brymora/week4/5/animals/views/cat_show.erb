@@ -1,0 +1,20 @@
+<h2><%= @cat["name"] %></h2>
+
+<p>Is it fluffy?
+    <% if @cat["isfluffy"] %>
+    Hell Yeah
+    <% else %>
+    Not really..
+    <% end %>
+</p>
+
+<p>Color: <%= @cat["color"] %></p>
+
+<% unless @cat["image"].nil? || @cat["image"].empty? %>
+<img id="cat-show" src="<%= @cat["image"] %>" alt="Cat <%= @cat["name"] %>">
+<% end %>
+
+<div id="buttons">
+    <a class="deledit" href="/cats/<%= @cat["id"] %>/edit">Edit</a>
+    <a class="deledit" href="/cats/<%= @cat["id"] %>/delete">Delete</a>
+</div>

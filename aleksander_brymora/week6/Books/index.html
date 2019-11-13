@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit-icons.min.js"></script>
+	<title>Books</title>
+</head>
+
+<body>
+	<div id="main-container" class="uk-container uk-margin-medium-top uk-animation-fade">
+		<h1 class="uk-heading-large">Books</h1>
+		<button class="uk-button uk-button-default uk-margin-small-right" type="button"
+			uk-toggle="target: #offcanvas-usage">New search</button>
+
+		<div id="offcanvas-usage" uk-offcanvas="flip: true">
+			<div class="uk-offcanvas-bar">
+				<button class="uk-offcanvas-close" type="button" uk-close></button>
+				<h3>Search</h3>
+				<div>
+					<div class="uk-search uk-search-default uk-width-1-1">
+						<span uk-search-icon></span>
+						<input id="search-input" class="uk-search-input" type="search" placeholder="Search...">
+					</div>
+					<button id="search-btn" class="uk-button uk-button-default uk-align-center">Search</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="./script.js"></script>
+</body>
+
+</html>

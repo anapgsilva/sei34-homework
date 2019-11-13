@@ -1,0 +1,25 @@
+<div id="photos">
+    <div class="row">
+        <img src="" class="random-cat-photo">
+        <img src="" class="random-cat-photo">
+    </div>
+    <div class="row">
+        <img src="" class="random-cat-photo">
+        <img src="" class="random-cat-photo">
+    </div>
+</div>
+<script src="/js/jquery-1.7.2.js"></script>
+<script>
+    const changePhoto = function () {
+        photos = $(".random-cat-photo");
+        for (let i = 0; i < photos.length; i++) {
+            $.getJSON('https://api.thecatapi.com/v1/images/search', function (data) {
+                url = data[0]["url"];
+                photos[i].src = url;
+                console.log(url);
+            })
+        }
+    }
+    changePhoto();
+    setInterval(changePhoto, 5000);
+</script>

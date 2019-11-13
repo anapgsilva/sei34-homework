@@ -1,0 +1,24 @@
+<h2>Edit the cat</h2>
+
+<form action="/cats/<%= @cat_to_edit["id"] %>" method="post">
+    <label>
+        <p>Name:</p> 
+        <input type="text" name="name" required placeholder="Name" value="<%= @cat_to_edit["name"] %>">
+    </label>
+    <label>
+        <p>Is it fluffy:</p>
+        <input type="checkbox" name="isfluffy" 
+        <% if @cat_to_edit["isfluffy"] %>
+            <%= "checked" %>
+        <% end %>>
+    </label>
+    <label>
+        <p>Color:</p>
+        <input type="text" name="color" placeholder="Color" value="<%= @cat_to_edit["color"] %>">
+    </label>
+    <label>
+        <p>Image:</p>
+        <input type="url" name="image" placeholder="http://..." value="<%= @cat_to_edit["image"] %>">
+    </label>
+    <button>Edit</button>
+</form>
