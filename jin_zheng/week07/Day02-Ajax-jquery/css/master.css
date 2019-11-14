@@ -1,0 +1,39 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 0% 100%;
+}
+
+body.show-aside {
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+
+aside {
+    width: 100%;
+    font-size: 30px;
+    font-family: Arial, monospace;
+    background-color: black;
+    color: white;
+}
+main {
+    width: 100%;
+    height: 766px;
+}
+#mapISS, #mapEarth {
+  height: 50%;
+}

@@ -4,31 +4,27 @@ let booklist;
 let index = 0;
 
 const fetchBook = () => {
+    const title = $("#search").val();
+    const url = `https://www.googleapis.com/books/v1/volumes?q=title:${title}`
 
-    const title = document.getElementById("search").value;
-    xhr.open('GET', `https://www.googleapis.com/books/v1/volumes?q=title:${title}`)
-    xhr.send()
-    xhr.onreadystatechange = () =>{
-        if (xhr.readyState !== 4) {
-            return
-        }
-        booklist = JSON.parse(xhr.responseText)['items']
-        updateCurrentBook()
-        document.getElementById("subtitle").innerHTML = "eat all " + booklist[index]["volumeInfo"]["title"]
-    }
+    $.ajax(url).done((data) => {
+            booklist = data.items;
+            updateCurrentBook()
+            $("#subtitle").text("eat all " + booklist[index]["volumeInfo"]["title"])
+        }).fail(() => {
+            alert('Something bad happened')
+        })
 }
 
 const updateCurrentBook = () => {
-    img = document.getElementById('current-book-thumb')
-    let attr = document.createAttribute("src");
-    attr.value = booklist[index]["volumeInfo"]["imageLinks"]["thumbnail"];
-    img.setAttributeNode(attr);
-    document.getElementById('current-book-title').innerHTML = booklist[index]["volumeInfo"]["title"];
+    $img = $('#current-book-thumb')
+    $img.attr("src", booklist[index]["volumeInfo"]["imageLinks"]["thumbnail"]);
+    $('#current-book-title').text(booklist[index]["volumeInfo"]["title"]);
 }
 
 
 $(document).ready(() => {
-    const canvas = document.getElementById("canvas");
+    const canvas = $("#canvas");
     const ctx = canvas.getContext("2d");
     const box = 32;
     const headImg = new Image();

@@ -8,13 +8,13 @@
 
 
 
-let run = function() {
+$('#search-form').on('submit', function(event) { // this makes the form submit on enter-press or on submit click.
+    
+    event.preventDefault(); // this prevents the form submission to server, which refreshes the page. Instead just allows AJAX below to run.
+
     let input = $('#search-box').val();
 
-    console.log('click')
     const xhr = new XMLHttpRequest();
-
-    console.log(`https://www.googleapis.com/books/v1/volumes?q=title:${input}`)
 
     xhr.open("GET", `https://www.googleapis.com/books/v1/volumes?q=title:${input}`);
     xhr.send();
@@ -30,10 +30,6 @@ let run = function() {
         $('div').append($(`<img src='${image}'></img>`))
         $('div').append($(`<p>${description}</p>`))
     }
-
-
-
-
+    
     $('#search-box').val('')
-}
-
+});
