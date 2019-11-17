@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
+// https://reactjs.org/tutorial/tutorial.html
+
 function Square(props) {
     return (
       <button
@@ -24,23 +26,20 @@ class Board extends React.Component {
   }
 
   render() {
+
     return (
       <div>
-        <div className="board-row">
-          {this.renderSquare(0)}
-          {this.renderSquare(1)}
-          {this.renderSquare(2)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(3)}
-          {this.renderSquare(4)}
-          {this.renderSquare(5)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(6)}
-          {this.renderSquare(7)}
-          {this.renderSquare(8)}
-        </div>
+        {[...Array(3)].map((row, rowIndex) => {
+         return (
+           <div className="board-row" key={rowIndex}>
+            {
+              [...Array(3)].map((col, colIndex) => {
+               return this.renderSquare((3 * rowIndex) + colIndex);
+              })
+            }
+           </div>
+         );
+       })}
       </div>
     );
   }
@@ -92,9 +91,17 @@ class Game extends React.Component {
         'Go to move #' + move :
         'Go to game start';
       return (
-        <li key={move}>
-          <button onClick={() => this.jumpTo(move)}>{desc}</button>
-        </li>
+        <tr key={move}>
+          <td>{move + 1}</td>
+          <td>
+            <button
+              onClick = {() => this.jumpTo(move)}
+              style = { move === this.state.stepNumber ? { fontWeight: 'bold' } : null }
+            >
+              {desc}
+            </button>
+          </td>
+        </tr>
       );
     });
 
@@ -115,7 +122,13 @@ class Game extends React.Component {
         </div>
         <div className="game-info">
           <div>{status}</div>
-          <ol>{moves}</ol>
+          <table>
+            <tr>
+              <th>Item No.</th>
+              <th>Description</th>
+            </tr>
+            {moves}
+          </table>
         </div>
       </div>
     );
