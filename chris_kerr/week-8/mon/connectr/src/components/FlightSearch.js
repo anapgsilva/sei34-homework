@@ -11,7 +11,6 @@ class FlightSearch extends Component {
             <div>
                 <h1>Flight Search</h1>
                 <SearchForm />
-                <FlightResults />
             </div>
         )
     }
