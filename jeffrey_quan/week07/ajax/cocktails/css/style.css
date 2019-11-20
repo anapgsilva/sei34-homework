@@ -1,0 +1,67 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.drink {
+  margin: 20px 0;
+}
+
+img {
+  height: 400px;
+  box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.8);
+}
+
+.drink-info {
+  display: flex;
+  height: 400px;
+}
+
+ul {
+  padding: 0 0 0 20px;
+}
+
+.ingredients {
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin-top: 0px;
+}
+
+.text {
+  padding-left: 10px;
+}
+
+.instructions {
+  text-align: justify;
+}
+
+form {
+  margin: 10px 0;
+}
+
+input {
+  font-size: 16px;
+}
+
+#search {
+  background-color: #0f52ba;
+  color: white;
+  font-size: 12px;
+  padding: 3px;
+  border-radius: 6px;
+}
