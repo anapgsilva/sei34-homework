@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
+  <title></title>
+  <style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+</style>
+</head>
+
+<body>
+  <h1>hi</h1>
+  <form>
+
+
+    <label>
+      Please enter the Team's name:
+      <input id="team" name="Team_Name" placeholder="Arsenal" required> <!-- required avaiding user to try without input-->
+    </label>
+
+    <button id="fetch">Search</button>
+  </form>
+  <table class="table table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Name </th>
+        <th scope="col">Formed Year </th>
+        <th scope="col">League </th>
+        <th scope="col">Stadium </th>
+      </tr>
+    </thead>
+    <tbody class="tableBody">
+      <!-- <tr> -->
+        <!-- <td id="Team_name" scope="col"></td>
+        <td id="formed_Year" scope="col"></td>
+        <td id="League" scope="col"></td>
+        <td id="Stadium" scope="col"></td> -->
+      <!-- </tr> -->
+    </tbody>
+  </table>
+  <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+
+
+</body>
+
+</html>
