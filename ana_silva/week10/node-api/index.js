@@ -26,14 +26,8 @@ server.post('/', (req, res) => {
 
   //axios request
   axios.get(`https://www.googleapis.com/books/v1/volumes?q=${query}`).then( (response) => {
-    console.log(response.data.items);
     const results = response.data.items;
-    //get result into variable
-    // console.log(results);
-    // console.log(results[0].selfLink);
-    // console.log(results[0].volumeInfo.title);
-    // console.log(results[0].volumeInfo.imageLinks );
-
+  
     res.render('results.ejs', {results: results});
 
   });
