@@ -21,9 +21,10 @@ cd ~/projects/sei34-homework
 
 git pull upstream master
 
-cp -r warmup/week04/day01_text_soup ~/Projects/sei34-classwork/warmup/textsoup2
+# copy the previous solution to where ever you keep your warmups
+cp -r warmup/week04/day01_text_soup ~/Projects/sei34-classwork/warmup/textsoup2  
 
-cd ~/projects/sei34-classwork/warmup/textsoup2
+cd ~/Projects/sei34-classwork/warmup/textsoup2
 
 curl https://raw.githubusercontent.com/dataarts/dat.gui/master/build/dat.gui.js >js/dat.gui.js
 
