@@ -9,6 +9,12 @@ function findMax(arr) {
     return value1 > value2 ? value1 : value2
 }
 
+function findMax2(array, largest=-Infinity) {
+    if (array.length === 0) return largest
+    if (array[0] > largest) largest = array[0];
+    return findMax2(array.slice(1), largest)
+}
+
 
 function factorial(n){
     if (n > 1) n *= factorial(n-1)
@@ -20,6 +26,34 @@ function fibonacci(n){
     return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
+
+/* Ruby
+** memorisation
+
+    def fib_meomo(n)
+        @fib ||= {}
+
+        if @fib[n]
+            @fib[n]
+        elsif n == 1 || n == 2
+            1
+        else
+            result = fib_memo(n-1) + fib_meno[n-2]
+            @fib[n] = result
+            result
+        end
+    end
+
+** iterative recursion
+    def fib(n, a=1, b=1)
+        if n == 1|| n == 2
+            b
+        else
+            fib(n-1, b, a+b)
+        end
+    end
+
+*/
 function coinFlips(n, index = 1, outcome = Array(2**n).fill("") ){
     // For example, coinFlips(2) would return the following:
     // ["HH", "HT", "TH", "TT"]
@@ -51,6 +85,19 @@ function coinFlips(n, index = 1, outcome = Array(2**n).fill("") ){
 //     innerLoop(0, n, i )
 // }
 
+function coinFlips2(tosses){
+    const combinations = [];
+    const flip = (soFar="") => {
+        if (soFar.length === tosses) {
+            combinations.push(soFar);
+        } else {
+            flip(soFar+"H");
+            flip(soFar+"F");
+        }
+    }
+    flip()
+    return combinations
+}
 
 function letterCombinations(array, result = []) {
     // For example, letterCombinations(["a","b","c"]) would return the following:
