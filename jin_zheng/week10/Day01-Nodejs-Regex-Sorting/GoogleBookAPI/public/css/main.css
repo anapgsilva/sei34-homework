@@ -1,0 +1,16 @@
+.gallary {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.book {
+  width: 15%;
+  margin: 10px;
+}
+
+.book-title {
+  overflow-x: scroll;
+  height: 50px;
+}

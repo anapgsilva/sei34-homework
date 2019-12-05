@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Search</title>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css'>
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <%- include('partials/searchForm.js') %>
+    <div class='gallary'>
+      <% books.map(book => { -%>
+    <div class='book'>
+      <h2 class='book-title'> <%= book.title %> </h2>
+      <img src=<%= book.img %>>
+    </div>
+<% }) %>
+</div>
+
+  </body>
+</html>
