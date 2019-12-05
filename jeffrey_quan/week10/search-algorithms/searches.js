@@ -20,6 +20,9 @@ function binarySearch(arr, element) {
 
 function recursiveBinarySearch(arr, element, start = 0, end = arr.length - 1) {
   let middle = Math.floor((start + end) / 2);
+  if (start > end) {
+    return -1;
+  }
 
   if (arr[middle] === element) {
     return middle;
@@ -29,7 +32,6 @@ function recursiveBinarySearch(arr, element, start = 0, end = arr.length - 1) {
     return recursiveBinarySearch(arr, element, middle + 1, end);
   }
 
-  return -1;
 }
 
 module.exports = {
