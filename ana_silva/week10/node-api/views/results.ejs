@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
+    <title>Book Search</title>
+  </head>
+  <body>
+
+    <a href="/">Back</a>
+
+    <h2>Book found</h2>
+
+    <a href=<%= results[0].selfLink %>>
+      <h4><%= results[0].volumeInfo.title %></h4>
+
+      <img src=<%= results[0].volumeInfo.imageLinks.smallThumbnail %> alt=""/>
+    
+    </a>
+
+
+
+
+  </body>
+</html>
