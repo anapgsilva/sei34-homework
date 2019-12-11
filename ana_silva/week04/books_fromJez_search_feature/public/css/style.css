@@ -1,0 +1,116 @@
+.hero {
+  margin: 80px auto;
+  padding: 5vh;
+  background: rgb(147, 255, 160);
+  display: flex;
+  justify-content: space-between;
+}
+.hero input, .hero button {
+  display: inline-block!important;
+  padding: 20px 40px;
+  background: #fff;
+/*   color: #222; */
+}
+.hero .right {
+  max-width:35%
+}
+.hero img {
+  border: 10px solid #fff;
+  box-sizing:border-box;
+}
+.hero .left {
+  max-width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero button {
+  background: #A093FF !important;
+}
+.hero button:hover {
+  background: #7360FF !important;
+}
+.tile {
+  background: #222222;
+  color: #fff;
+  margin: 2vh auto;
+  padding: 4vh;
+  display:flex;
+  justify-content: space-between;
+}
+
+.left {
+  max-width: 75%;
+
+}
+.right {
+  max-width: 25%;
+  align-self: center;
+}
+.tile .right img {
+  height: 15vh;
+  box-sizing: border-box;
+  flex: 0;
+  border: 4px solid #fff;
+}
+.description {
+  line-height: 1.6;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vh;
+/*   background: rgba(255, 255, 255, 0.15); */
+  border-bottom: 8px solid #222;
+}
+ nav a{
+  padding:10px 20px;
+  /* background: rgba(0,0,0,0.5);
+  border-radius: 6px; */
+  color: #222;
+}
+
+nav a:hover {
+  /* background: rgba(255, 255, 255, 0.1); */
+  text-decoration: none;
+}
+nav button {
+  background: rgb(255, 182, 147);
+  transition: 0.2s all;
+}
+nav * {
+  display: inline-block!important;
+  margin: 0;
+}
+
+nav input {
+  background: #f3f3f3;
+}
+
+input, button {
+  background:#fff;
+/*   border: 2px solid #222; */
+  border-radius: 0px;
+}
+
+button {
+  background: #FFA093 !important;
+}
+
+button:hover {
+  background:  #FF7360 !important;
+}
+
+.tile strong {
+  color: #fff;
+}
+
+.tile h2 {
+  background: rgb(147, 255, 160);
+  padding: 2vh;
+}
+
+.tile a {
+  color: rgb(147, 255, 160);
+}

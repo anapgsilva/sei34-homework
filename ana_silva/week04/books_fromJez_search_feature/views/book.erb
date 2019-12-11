@@ -1,0 +1,29 @@
+<h2>Hits for "<%= @title %>": <strong><%= @total %></strong></h2>
+
+
+<%=
+  str = ''
+  @hits.each_with_index do |hit, i|
+    str +=
+    "
+    <div class='tile'>
+      <div class='left'>
+      <h2>#{i+1}. #{hit[:title]}</h2>
+      <p>by <strong>#{hit[:authors]}</strong>, #{hit[:date][0..3]}</p>
+      <p>
+        #{hit[:rating]}&nbsp;&#9733;&nbsp;(#{hit[:rating_count]})&nbsp;&nbsp;&nbsp;
+        <a target='_blank' href='#{hit[:preview]}' alt='#{hit[:title]} on Google Books'>Preview Link </a>
+      </p>
+      <details closed>
+        <summary><strong>Description</strong></summary>
+        <p class='description'>#{hit[:description]}</p>
+      </details>
+      </div>
+      <div class='right'>
+        <img src='#{hit[:thumb]}' alt='#{hit[:title]} by #{hit[:authors]}.'>
+      </div>
+    </div>
+    "
+  end
+  str
+%>
